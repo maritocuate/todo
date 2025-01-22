@@ -90,7 +90,6 @@ export function TodoList() {
           Keep track of your tasks in a beautiful way
         </p>
       </div>
-
       <div className="flex gap-2 flex-col md:flex-row bg-pink-600 p-2 rounded-md">
         <Input
           placeholder="Add a new todo..."
@@ -121,7 +120,6 @@ export function TodoList() {
           <Plus className="w-4 h-4" />
         </Button>
       </div>
-
       <div className="flex gap-2 pb-4 overflow-x-auto">
         <Button
           variant={filter === "all" ? "default" : "outline"}
@@ -156,6 +154,9 @@ export function TodoList() {
         ))}
       </div>
 
+      {filteredTodos.length === 0 ? (
+        <p className="text-secondary-foreground text-fuchsia-800">No tasks</p>
+      ) : null}
       <div className="space-y-4">
         {filteredTodos.map((todo) => {
           const category = categories.find((c) => c.id === todo.categoryId);
