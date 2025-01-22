@@ -6,5 +6,4 @@ export const initialCategories: Category[] = [
   { id: "3", name: "Shopping", color: "hsl(var(--chart-3))" },
   { id: "4", name: "Health", color: "hsl(var(--chart-4))" },
 ];
-
 export const initialTodos: Todo[] = [];
