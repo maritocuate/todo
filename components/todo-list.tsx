@@ -91,7 +91,7 @@ export function TodoList() {
         </p>
       </div>
 
-      <div className="flex gap-2">
+      <div className="flex gap-2 flex-col md:flex-row">
         <Input
           placeholder="Add a new todo..."
           value={newTodo}
@@ -122,7 +122,7 @@ export function TodoList() {
         </Button>
       </div>
 
-      <div className="flex gap-2 pb-4">
+      <div className="flex gap-2 pb-4 overflow-x-scroll">
         <Button
           variant={filter === "all" ? "default" : "outline"}
           onClick={() => setFilter("all")}
